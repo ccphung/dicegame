@@ -9,67 +9,63 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <meta>
+    <link rel="shortcut icon" href="images/dice-6-svgrepo-com.svg" type="image/x-icon">
     <title>Dice Game</title>
 </head>
 <body>
 
-
 <div class="display-grid">
     <div class="new-game">
-        <img src="images/plus-circle-svgrepo-com.svg" alt="plus-circle">
-        <div>NEW GAME</div>
+        <img src="images/plus-circle-svgrepo-com.svg" alt="plus-circle" class="medium-size-img">
+        <div class="medium-font-size">NEW GAME</div>
     </div>
 
-
+    <!-- Player 1 -->
         <div class="player-one">
-            <div>PLAYER 1</div>
+            <div class="big-font-size">PLAYER 1</div>
             <img src="images/dot-svgrepo-com.svg" alt="dot">
         </div>
 
+    <!-- Player 2 -->
         <div class="player-two">
-            <div>PLAYER 2</div>
+            <div class="big-font-size">PLAYER 2</div>
             <img src="images/dot-svgrepo-com.svg" alt="dot">
         </div>
 
-    
+        <div class="player-one-score bigger-font-size"  id="global-point">0</div>
 
-        <div class="player-one-score">43</div>
-
+    <!-- Dice image -->
         <div class="dice">
-        <img src="images/dice-five-svgrepo-com.svg" alt="dice">
+        <img id="dice-img" src="images/dice-6-svgrepo-com.svg" alt="dice">
         </div>
+        <div class="player-two-score bigger-font-size">0</div>
 
-        <div class="player-two-score">72</div>
- 
-
+    <!-- Player 1 - Current score -->
     <div class="player-one-crt-sc">
-        <div>CURRENT</div>
-        <div>11</div>
+        <div class="small-font-size">CURRENT</div>
+        <div id="player-one-crt-sc-number"class="big-font-size text-white">0</div>
     </div>
 
+
+    <!-- Options : Roll Dice - Hold -->
     <div class="options">
         <div class="option-roll-dice">
-            <img src="images/arrow-spin-svgrepo-com.svg" alt="arrow-sping">
-            <div>ROLL DICE</div>
+            <img id="roll-dice-img" class="medium-size-img" src="images/arrow-spin-svgrepo-com.svg" alt="arrow-sping">
+            <div class="medium-font-size">ROLL DICE</div>
         </div>
         <div class="option-hold">
-            <img src="images/arrow-down-to-square-svgrepo-com.svg" alt="">
-            <div>HOLD</div>
+            <img class="medium-size-img" id="hold-img"src="images/arrow-down-to-square-svgrepo-com.svg" alt="">
+            <div class="medium-font-size">HOLD</div>
         </div>
     </div>
-
     
+    <!-- Player 2 - Current score -->
     <div class="player-two-crt-sc">
-        <div>CURRENT</div>
-        <div>11</div>
+        <div class="small-font-size">CURRENT</div>
+        <div class="big-font-size text-white">0</div>
     </div>
-
-
 </div>
-
-
-
-
     <script src="script.js"></script>
 </body>
 </html>
