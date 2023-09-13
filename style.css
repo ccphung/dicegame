@@ -1,3 +1,65 @@
 body {
     font-family: 'Lato', sans-serif;
 }
+
+img {
+    height: 5vh;
+}
+
+.display-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    ". new-game ."
+    "player-one . player-two"
+    "player-one-score dice player-two-score"
+    "player-one-crt-sc options player-two-crt-sc";
+}
+
+.new-game, .player-one, .player-two, .player-one-score, .dice, .player-two-score, .player-one-crt-sc, .player-two-crt-sc, .option-roll-dice, .option-hold {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.new-game {
+    grid-area: new-game;
+}
+
+.player-one {
+    grid-area: player-one;
+}
+
+.player-two {
+    grid-area: player-two;
+}
+
+.player-one-score {
+    grid-area: player-one-score;
+}
+
+.dice {
+    grid-area: dice;
+}
+
+.player-two-score {
+    grid-area: player-two-score;
+}
+
+.player-one-crt-sc {
+    grid-area: player-one-crt-sc;
+}
+
+.options {
+    grid-area: options;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-two-crt-sc {
+    grid-area: player-two-crt-sc;
+}
