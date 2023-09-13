@@ -6,11 +6,12 @@ img {
     height: 5vh;
 }
 
+
 .display-grid {
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: 5vh 20vh 50vh 20vh;
     grid-template-areas:
     ". new-game ."
     "player-one . player-two"
@@ -18,7 +19,7 @@ img {
     "player-one-crt-sc options player-two-crt-sc";
 }
 
-.new-game, .player-one, .player-two, .player-one-score, .dice, .player-two-score, .player-one-crt-sc, .player-two-crt-sc, .option-roll-dice, .option-hold {
+.new-game, .player-one, .player-two, .player-one-score, .dice, .player-two-score, .option-roll-dice, .option-hold {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,14 +53,61 @@ img {
     grid-area: player-one-crt-sc;
 }
 
-.options {
-    grid-area: options;
+.options, .player-two-crt-sc, .player-one-crt-sc {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.options{
+    grid-area: options;
+}
+
 .player-two-crt-sc {
     grid-area: player-two-crt-sc;
+}
+
+.small-font-size {
+    font-size: 1em;
+}
+
+.medium-font-size {
+    font-size: 1.5em;
+}
+
+.big-font-size {
+    font-size: 3.5em;
+}
+
+.bigger-font-size {
+    font-size: 7em;
+}
+
+.player-two-crt-sc, .player-one-crt-sc {
+    background: #CD5C5C;
+}
+
+.medium-size-img {
+    height: 2em;
+    padding-right: 15px ;
+}
+
+.player-one-score, .player-two-score {
+    color:#CD5C5C
+}
+
+#dice-img {
+    height: 10em;
+}
+
+.text-white {
+    color : white;
+}
+
+.gray-background {
+    width: 50vw;
+    height: 100vh;
+    background: lightblue;
+    float:left
 }
