@@ -16,9 +16,11 @@
 <body>
 
 <div class="display-grid">
+
+    <!-- New Game -->
     <div class="new-game">
         <img src="images/plus-circle-svgrepo-com.svg" alt="plus-circle" class="medium-size-img">
-        <div class="medium-font-size">NEW GAME</div>
+        <div class="medium-font-size" id="new-game-btn">NEW GAME</div>
     </div>
 
     <!-- Player 1 -->
@@ -33,20 +35,22 @@
             <img src="images/dot-svgrepo-com.svg" alt="dot">
         </div>
 
-        <div class="player-one-score bigger-font-size"  id="global-point">0</div>
+    <!-- Player 1 - Total Point -->
+        <div class="player-one-score bigger-font-size"  id="player-one-total-point">0</div>
 
     <!-- Dice image -->
         <div class="dice">
         <img id="dice-img" src="images/dice-6-svgrepo-com.svg" alt="dice">
         </div>
-        <div class="player-two-score bigger-font-size">0</div>
+
+    <!-- Player 2 - Total point -->
+        <div class="player-two-score bigger-font-size" id="player-two-total-point">0</div>
 
     <!-- Player 1 - Current score -->
     <div class="player-one-crt-sc">
         <div class="small-font-size">CURRENT</div>
         <div id="player-one-crt-sc-number"class="big-font-size text-white">0</div>
     </div>
-
 
     <!-- Options : Roll Dice - Hold -->
     <div class="options">
@@ -63,7 +67,7 @@
     <!-- Player 2 - Current score -->
     <div class="player-two-crt-sc">
         <div class="small-font-size">CURRENT</div>
-        <div class="big-font-size text-white">0</div>
+        <div class="big-font-size text-white" id="player-two-crt-sc-number">0</div>
     </div>
 </div>
     <script src="script.js"></script>
