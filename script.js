@@ -6,6 +6,8 @@ const player2Global = document.getElementById('player-two-total-point')
 const diceImg = document.querySelector('#dice-img')
 const holdImg = document.getElementById('hold-img')
 const newGameBtn = document.getElementById('new-game-btn')
+const player1dot = document.getElementById('dot-turn-player1')
+const player2dot = document.getElementById('dot-turn-player2')
 
 class Player {
     constructor(name, turn, roundPoint, globalPoint) {
@@ -29,6 +31,8 @@ class Player {
             this.turn = false
             versus.turn = true
             playersTurn.innerHTML = this.roundPoint
+            turnDisplay()
+
         }
         }
 
@@ -40,14 +44,19 @@ class Player {
         playersTurn.innerHTML = this.globalPoint
         playersTurnRound.innerHTML = this.roundPoint = 0;
         if(this.globalPoint >= 100) {
-            alert(  'Bravo ' + this.name + ' vous avez gagné avec ' + this.globalPoint +" points")
-            newGameBtn.click
+            alert(  'Bravo ' + this.name + ', vous avez gagné avec ' + this.globalPoint +" points !")
+            alert('Recommencer une partie ?')
+            newGame()
         }
+    }
+
+    dotDisplay() {
+
     }
 }
 
-let player1 = new Player('player1', false, 0, 0) 
-let player2 = new Player('player2', true, 0, 0) 
+let player1 = new Player('player1', true, 0, 0) 
+let player2 = new Player('player2', false, 0, 0) 
 
 // Jeter le dé
 rollDice.addEventListener('click', () => {
@@ -58,13 +67,27 @@ rollDice.addEventListener('click', () => {
 holdImg.addEventListener('click', () => {player1.turn ? player1.hold() : player2.hold()})
 
 // Nouveau jeu
-newGameBtn.addEventListener('click', () => {
+const newGame = () => {
     player1.globalPoint = player2.globalPoint = 0
     player1.roundPoint = player2.roundPoint =0
     player1Round.innerHTML = player2Round.innerHTML = 0
     player1Global.innerHTML = player2Global.innerHTML = 0
+} 
 
-    console.log(player1.globalPoint + player2.globalPoint + player1.roundPoint + 
-        player2.roundPoint + player1Round.innerHTML + player2Round.innerHTML +  
-        player1Global.innerHTML + player2Global.innerHTML)
+newGameBtn.addEventListener('click', () => {
+    newGame()
 })
+
+// fonction affichant le tour du joueur avec le point rouge
+function turnDisplay() {
+if(player1.turn) {
+        player2dot.style.display ="none"
+        player1dot.style.display =""
+    } else {
+        player2dot.style.display =""
+        player1dot.style.display ="none"
+    }
+
+}
+
+turnDisplay()
