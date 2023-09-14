@@ -111,3 +111,12 @@ img {
     background: lightblue;
     float:left
 }
+
+.btn {
+    cursor: pointer;
+}
+
+.btn:hover{
+    height: 2.2em;
+    transition: 0.3s;
+}
